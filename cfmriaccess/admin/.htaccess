@@ -1,0 +1,14 @@
+Options FollowSymLinks Includes
+
+AuthName "CFMRI Admin Area"
+AuthType Basic
+
+AuthUserFile /var/www/cfmriwiki/local/.htpasswd
+AuthGroupFile /var/www/cfmriwiki/local/.htgroup
+<RequireAll>
+require group admins cfmriaccess
+<RequireAny>
+Require ip 137.110.3.192/255.255.255.240
+Require ip 132.239.132.0/255.255.255.128 132.239.108.128/255.255.255.128
+</RequireAny>
+</RequireAll>

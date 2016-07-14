@@ -1,0 +1,6 @@
+Options FollowSymLinks Includes
+RewriteEngine On
+RewriteCond %{HTTP_HOST} !^cfmriweb.ucsd.edu$ [NC]
+RewriteRule (.*) https://cfmriweb.ucsd.edu%{REQUEST_URI}
+RewriteCond HTTPS off
+RewriteRule (.*) https://cfmriweb.ucsd.edu%{REQUEST_URI}
